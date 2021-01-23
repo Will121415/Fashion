@@ -1,1 +1,53 @@
-<p>footer works!</p>
+<footer class="color">
+  <div  style="margin-bottom:0">
+    <div class="row">
+      <div class="col-xs-12 col-md-4">
+        <div class="box">
+          <h3>Productos</h3>
+          <ul>
+            <li>
+              <a routerLink="/products" [queryParams]="{ type: 'news' }"
+                >Nuevos Productos</a
+              >
+            </li>
+            <li>
+              <a routerLink="/products" [queryParams]="{ type: 'offer' }"
+                >En oferta</a
+              >
+            </li>
+            <li>
+              <a routerLink="/products" [queryParams]="{ type: 'latest' }"
+                >Últimos productos</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-4">
+        <div class="box">
+          <h3>Acerca de Fashion YBG</h3>
+          <ul>
+            <li><a routerLink="/about-us">Sobre nosotros</a></li>
+            <li><a routerLink="/stores">Nuestras tiendas</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-4">
+        <div class="box">
+          <h3>Contacto</h3>
+          <mat-form-field appearance="fill">
+            <mat-label>Email Address</mat-label>
+            <input type="email"  matInput #input placeholder="email@domain.com">
+            <mat-hint  align="start">Enter a valid email address</mat-hint>
+            <mat-hint align="end">{{input.value?.length || 0}}/20</mat-hint>
+          </mat-form-field>
+          <button mat-raised-button >Enviar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="styles">
+    <h3>© 2020 Copyright - Mora Will</h3>
+  </div>
+</footer>
